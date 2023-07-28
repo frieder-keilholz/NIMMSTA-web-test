@@ -65,6 +65,6 @@ colorLED = () => {
 
 showTouch = (x, y) => {
     lastTouch = document.getElementById('last-touch');
-    lastTouch.style.left = x + document.getElementById('display').style.left
-    lastTouch.style.top = y + document.getElementById('display').style.top
+    lastTouch.style.left = x + document.getElementById('display').offsetLeft + 'px'
+    lastTouch.style.top = y + document.getElementById('display').offsetTop + 'px'
 }
