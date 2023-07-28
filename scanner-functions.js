@@ -23,3 +23,14 @@ NIMMSTA.onError(function(error) {
     console.error(error)
     alert(error)
 });
+
+writeToWatch: (text) => {
+    device.setLayout(new SuccessLayout(text)).then(() => {
+        console.log('Text gesetzt')
+        document.getElementById('text-input').classList.add('is-valid')
+    }).catch((error) => {
+        console.log(error)
+        document.getElementById('text-input').classList.add('is-invalid')
+    });
+}
+
