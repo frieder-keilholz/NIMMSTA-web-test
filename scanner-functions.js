@@ -9,6 +9,9 @@ NIMMSTA.onReady(function() {
         const device = connectionManager.devices[0];
         console.log(device)
         document.getElementById('address').innerHTML = device.address
+        document.getElementById('bat-value').innerHTML = device.batteryLevel
+        if(device.isCharging) document.getElementById('bat-value').innerHTML += '(lädt)'
+        document.getElementById('trigger-mode').innerHTML = device.preferredTriggerMode
     } else {
         connectionManager.displayConnectActivity();
     }
