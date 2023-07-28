@@ -50,7 +50,7 @@ NIMMSTA.onError(function(error) {
 });
 
 writeToWatch = () => {
-    device.setLayoutFor(5000, new SuccessLayout(document.getElementById('text-input'))).then(() => {
+    device.setLayoutFor(5000, new SuccessLayout(document.getElementById('text-input').value)).then(() => {
         console.log('Text gesetzt');
         document.getElementById('text-input').classList.add('is-valid');
     }).catch((error) => {
