@@ -33,6 +33,9 @@ NIMMSTA.onReady(function() {
             console.log(`Battery level changed to ${event.batteryLevel}`);
             document.getElementById('bat-value').innerHTML = event.batteryLevel + '%'
         });
+        connectionManager.socketDisconnectEvent.subscribe((event) => {
+            console.log("CurrentConnectionCount", event.currentConnectionCount);
+        });
     } else {
         connectionManager.displayConnectActivity();
     }
