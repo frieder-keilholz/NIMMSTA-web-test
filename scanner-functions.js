@@ -14,14 +14,14 @@ NIMMSTA.onReady(function() {
         document.getElementById('trigger-mode').innerHTML = device.preferredTriggerMode
         device.getDeviceInfo().then((response) => {
             console.log(response)
-            document.getElementById('bat-value').innerHTML = response.batteryLevel
+            document.getElementById('bat-value').innerHTML = response.batteryLevel + '%'
             if(device.isCharging) document.getElementById('bat-value').innerHTML += ' (lädt)'
         });
         // register events
         device.scanEvent.subscribe((event) => {
             console.log("Scanned barcode:", event.barcode);
             console.log("Barcode Bytes:", event.barcodeBytes);
-            document.getElementById('last-scan').innerHTML = event.barcode;
+            document.getElementById('last-scan').value = event.barcode;
             // original (scanned) barcode without rules applied
             console.log("Scanned barcode without rules:", event.originalBarcode);
         });
