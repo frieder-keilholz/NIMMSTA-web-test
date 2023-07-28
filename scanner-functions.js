@@ -25,6 +25,14 @@ NIMMSTA.onReady(function() {
             // original (scanned) barcode without rules applied
             console.log("Scanned barcode without rules:", event.originalBarcode);
         });
+        device.touchEvent.subscribe((event) => {
+            console.log(`TouchEvent: X: ${event.x} Y: ${event.y}`);
+            showTouch(event.x, event.y);
+        });
+        device.batteryLevelChangedEvent.subscribe((event) => {
+            console.log(`Battery level changed to ${event.batteryLevel}`);
+            document.getElementById('bat-value').innerHTML = event.batteryLevel + '%'
+        });
     } else {
         connectionManager.displayConnectActivity();
     }
@@ -53,4 +61,10 @@ colorLED = () => {
     }).catch((error) => {
         console.log("Error setting LED color", error);
     });
+}
+
+showTouch = (x, y) => {
+    lastTouch = document.getElementById('last-touch');
+    lastTouch.style.left = x + document.getElementById('display').style.left
+    lastTouch.style.top = y + document.getElementById('display').style.top
 }
