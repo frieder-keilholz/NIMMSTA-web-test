@@ -72,6 +72,28 @@ colorLED =() => {
     });
 }
 
+setExampleLayout = () => {
+    const xml = `
+<?xml version="1.0" encoding="utf-8"?>
+<NimmstaLayout name="empty">
+    <device width="1.54" height="1.54" pxx="200" pxy="200">
+        <screen default="true" name="default">
+            <staticElements>
+                <!-- The elements are going to be placed here -->
+                <cell x="10" y="10" name="text1">Text1</cell>
+                <cell x="10" y="50" name="text2">Text2</cell>
+            </staticElements>
+        </screen>
+    </device>
+</NimmstaLayout>
+`;
+device.setXMLLayoutFor(5000, xml).then(() => {
+    console.log("XML layout with timeout successfully set");
+}).catch((error) => {
+    console.log("Error setting XML layout with timeout", error);
+});
+}
+
 showTouch = (x, y) => {
     lastTouch = document.getElementById('last-touch');
     lastTouch.style.left = x + document.getElementById('display').offsetLeft + 'px'
