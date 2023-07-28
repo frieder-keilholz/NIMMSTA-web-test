@@ -71,7 +71,7 @@ colorLED =() => {
         console.log("Error setting LED color", error);
     });
 }
-colorLED =() => {
+LEDoff =() => {
     device.setLEDColor(0,0,0).then(() => {
         console.log("Led color successfully set to 0 0 0 ");
     }).catch((error) => {
