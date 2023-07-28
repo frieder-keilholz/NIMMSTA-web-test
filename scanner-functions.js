@@ -55,6 +55,11 @@ writeToWatch = (text) => {
     });
 }
 
+clearValInput = (input) => {
+    if(input.classList.contains('is-valid')) input.classList.remove('is-valid')
+    if(input.classList.contains('is-valid')) input.classList.remove('is-invalid')
+}
+
 colorLED = () => {
     device.setLEDColor(50, 200, 50).then(() => {
         console.log("Led color successfully set");
