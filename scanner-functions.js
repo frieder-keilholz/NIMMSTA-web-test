@@ -17,6 +17,14 @@ NIMMSTA.onReady(function() {
             document.getElementById('bat-value').innerHTML = response.batteryLevel
             if(device.isCharging) document.getElementById('bat-value').innerHTML += ' (lädt)'
         });
+        // register events
+        device.scanEvent.subscribe((event) => {
+            console.log("Scanned barcode:", event.barcode);
+            console.log("Barcode Bytes:", event.barcodeBytes);
+            document.getElementById('last-scan').innerHTML = event.barcode;
+            // original (scanned) barcode without rules applied
+            console.log("Scanned barcode without rules:", event.originalBarcode);
+        });
     } else {
         connectionManager.displayConnectActivity();
     }
