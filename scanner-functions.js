@@ -37,7 +37,7 @@ writeToWatch = (text) => {
 }
 
 colorLED = () => {
-    device.setLEDColor(100, 0, 200).then(() => {
+    device.setLEDColor(50, 200, 50).then(() => {
         console.log("Led color successfully set");
     }).catch((error) => {
         console.log("Error setting LED color", error);
