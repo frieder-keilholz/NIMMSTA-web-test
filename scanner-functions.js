@@ -70,7 +70,7 @@ colorLED =() => {
     if(green == 255) green = 0
     device.setLEDColor(50, green, 50).then(() => {
         console.log("Led color successfully set: ");
-        console.log({R:50, G:green, B:50});
+        console.log({R:50, G:green, B:255-green});
     }).catch((error) => {
         console.log("Error setting LED color", error);
     });
