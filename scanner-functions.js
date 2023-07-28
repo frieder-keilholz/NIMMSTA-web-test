@@ -64,11 +64,8 @@ clearValInput = (input) => {
     if(input.classList.contains('is-valid')) input.classList.remove('is-invalid')
 }
 
-var green = 0;
 colorLED =() => {
-    green += 50
-    if(green > 250) green = 0
-    device.setLEDColor(50, green, 50).then(() => {
+    device.setLEDColor(Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256)).then(() => {
         console.log("Led color successfully set: ");
         console.log({R:250-green, G:green, B:100});
     }).catch((error) => {
