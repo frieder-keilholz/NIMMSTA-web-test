@@ -104,6 +104,6 @@ device.setXMLLayoutFor(10000, xml).then(() => {
 
 showTouch = (x, y) => {
     lastTouch = document.getElementById('last-touch');
-    lastTouch.style.left = x + document.getElementById('display').offsetLeft + 'px'
-    lastTouch.style.top = y + document.getElementById('display').offsetTop + 'px'
+    lastTouch.style.left = (2*x) + document.getElementById('display').offsetLeft + 'px'
+    lastTouch.style.top = (2*y) + document.getElementById('display').offsetTop + 'px'
 }

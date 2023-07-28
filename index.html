@@ -16,39 +16,40 @@
         Verbindung verloren
     </div>
     <div class="container">
+        <h1>Funktionen im NIMMSTA Web Framework</h1>
+        <br>
+        <br>
         <div class="row">
-            <div class="col-4">
+            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
                 <h3>Batterie Status </h3>
-                <span id="bat-value" class="badge badge-primary">%</span>
+                <span id="bat-value" class="badge badge-primary"></span>
             </div>
-            <div class="col-4">
-                <h3>Adresse</h3>
+            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
+                <h3>HW-Adresse</h3>
                 <span id="address" class="badge badge-primary"></span>
             </div>
-            <div class="col-4">
+            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
                 <h3>Trigger Mode</h3>
                 <span id="trigger-mode" class="badge badge-primary"></span>
             </div>
         </div>
         <div class="row">
-            <div class="col-5">
+            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
                 <h3>Wert des letzten Scans</h3>
                 <input type="text" id="last-scan" class="form-control" disabled>
             </div>
-            <div class="col-1"></div>
-            <div class="col-6">
-                <h3>Gebe Wert an Display aus</h3>
+            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
+                <h3>Text auf Display ausgeben</h3>
                 <input id="text-input" onchange="clearValInput(this)" type="text" class="form-control" type="number">
                 <button type="button" class="btn btn-primary m-1" onclick="writeToWatch()">Übertragen</button>
             </div>
         </div>
         <div class="row">
-            <div class="col-5">
+            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
                 <h3>Beispiel Layout</h3>
                 <button type="button" class="btn btn-primary" onclick="setExampleLayout()">Beispiel anzeigen</button>
             </div>
-            <div class="col-1"></div>
-            <div class="col-5">
+            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
                 <h3>Setze LED</h3>
                 <button type="button" onclick="colorLED()" class="btn btn-primary m-1">Zufällige Farbe</button>
                 <button type="button" onclick="LEDoff()" class="btn btn-primary m-1">LED Aus</button>
@@ -59,9 +60,9 @@
     <br>
     <div class="container">
         <h3>Letzter Touch</h3>
-        <div id="display" style="height: 200px; width:200px; background-color: lightblue;">
+        <div id="display" style="height: 400px; width:400px; background-color: lightblue;">
         </div>
-        <div id="last-touch" style="background-color: orange; border-radius: 2px; width: 7px; height: 7px; position: absolute; z-index: 9;"></div>
+        <div id="last-touch" style="background-color: orange; border-radius: 2px; width: 8px; height: 8px; position: absolute; z-index: 9;"></div>
     </div>
 </body>
 </html>
