@@ -49,8 +49,8 @@ NIMMSTA.onError(function(error) {
     alert(error);
 });
 
-writeToWatch = (text) => {
-    device.setLayoutFor(5000, new SuccessLayout(text)).then(() => {
+writeToWatch = () => {
+    device.setLayoutFor(5000, new SuccessLayout(document.getElementById('text-input'))).then(() => {
         console.log('Text gesetzt');
         document.getElementById('text-input').classList.add('is-valid');
     }).catch((error) => {
