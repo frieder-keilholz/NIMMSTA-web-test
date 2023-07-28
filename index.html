@@ -20,37 +20,37 @@
         <br>
         <br>
         <div class="row">
-            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
-                <h3>Batterie Status </h3>
+            <div class="col shadow-sm p-3 mb-3 mx-3 bg-body rounded">
+                <h4>Batterie Status </h4>
                 <span id="bat-value" class="badge badge-primary"></span>
             </div>
-            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
-                <h3>HW-Adresse</h3>
+            <div class="col shadow-sm p-3 mb-3 mx-3 bg-body rounded">
+                <h4>HW-Adresse</h4>
                 <span id="address" class="badge badge-primary"></span>
             </div>
-            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
-                <h3>Trigger Mode</h3>
+            <div class="col shadow-sm p-3 mb-3 mx-3 bg-body rounded">
+                <h4>Trigger Mode</h4>
                 <span id="trigger-mode" class="badge badge-primary"></span>
             </div>
         </div>
         <div class="row">
-            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
-                <h3>Wert des letzten Scans</h3>
+            <div class="col shadow-sm p-3 mb-3 mx-3 bg-body rounded">
+                <h4>Wert des letzten Scans</h4>
                 <input type="text" id="last-scan" class="form-control" disabled>
             </div>
-            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
-                <h3>Text auf Display ausgeben</h3>
+            <div class="col shadow-sm p-3 mb-5 mx-3 bg-body rounded">
+                <h4>Text auf Display ausgeben</h4>
                 <input id="text-input" onchange="clearValInput(this)" type="text" class="form-control" type="number">
                 <button type="button" class="btn btn-primary m-1" onclick="writeToWatch()">Übertragen</button>
             </div>
         </div>
         <div class="row">
-            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
-                <h3>Beispiel Layout</h3>
+            <div class="col shadow-sm p-3 mb-3 mx-3 bg-body rounded">
+                <h4>Beispiel Layout</h4>
                 <button type="button" class="btn btn-primary" onclick="setExampleLayout()">Beispiel anzeigen</button>
             </div>
-            <div class="col shadow p-3 mb-5 mx-3 bg-body rounded">
-                <h3>Setze LED</h3>
+            <div class="col shadow-sm p-3 mb-3 mx-3 bg-body rounded">
+                <h4>Setze LED</h4>
                 <button type="button" onclick="colorLED()" class="btn btn-primary m-1">Zufällige Farbe</button>
                 <button type="button" onclick="LEDoff()" class="btn btn-primary m-1">LED Aus</button>
             </div>
@@ -59,7 +59,7 @@
     <br>
     <br>
     <div class="container">
-        <h3>Letzter Touch</h3>
+        <h4>Letzter Touch</h4>
         <div id="display" style="height: 400px; width:400px; background-color: lightblue;">
         </div>
         <div id="last-touch" style="background-color: orange; border-radius: 2px; width: 8px; height: 8px; position: absolute; z-index: 9;"></div>
