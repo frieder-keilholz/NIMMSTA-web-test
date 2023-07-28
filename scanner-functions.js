@@ -15,7 +15,7 @@ NIMMSTA.onReady(function() {
         device.getDeviceInfo().then((response) => {
             console.log(response)
             document.getElementById('bat-value').innerHTML = response.batteryLevel
-            if(device.isCharging) document.getElementById('bat-value').innerHTML += '(lädt)'
+            if(device.isCharging) document.getElementById('bat-value').innerHTML += ' (lädt)'
         });
     } else {
         connectionManager.displayConnectActivity();
