@@ -24,7 +24,7 @@ NIMMSTA.onError(function(error) {
     alert(error)
 });
 
-writeToWatch: (text) => {
+writeToWatch = (text) => {
     device.setLayout(new SuccessLayout(text)).then(() => {
         console.log('Text gesetzt')
         document.getElementById('text-input').classList.add('is-valid')
@@ -34,7 +34,7 @@ writeToWatch: (text) => {
     });
 }
 
-colorLED: () => {
+colorLED = () => {
     device.setLEDColor(100, 0, 200).then(() => {
         console.log("Led color successfully set");
     }).catch((error) => {
