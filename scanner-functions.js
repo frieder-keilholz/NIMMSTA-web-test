@@ -67,7 +67,7 @@ clearValInput = (input) => {
 var green = 0;
 colorLED =() => {
     green += 50
-    if(green == 250) green = 0
+    if(green > 250) green = 0
     device.setLEDColor(50, green, 50).then(() => {
         console.log("Led color successfully set: ");
         console.log({R:250-green, G:green, B:100});
