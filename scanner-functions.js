@@ -66,8 +66,7 @@ clearValInput = (input) => {
 
 colorLED =() => {
     device.setLEDColor(Math.floor(Math.random() * 256), Math.floor(Math.random() * 256), Math.floor(Math.random() * 256)).then(() => {
-        console.log("Led color successfully set: ");
-        console.log({R:250-green, G:green, B:100});
+        console.log("Led color successfully set");
     }).catch((error) => {
         console.log("Error setting LED color", error);
     });
