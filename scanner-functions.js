@@ -8,6 +8,7 @@ NIMMSTA.onReady(function() {
     if (connectionManager.devices.length > 0) {
         const device = connectionManager.devices[0];
         console.log(device)
+        document.getElementById('address').innerHTML = device.address
     } else {
         connectionManager.displayConnectActivity();
     }
