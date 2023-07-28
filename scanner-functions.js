@@ -79,15 +79,16 @@ setExampleLayout = () => {
     <device width="1.54" height="1.54" pxx="200" pxy="200">
         <screen default="true" name="default">
             <staticElements>
-                <!-- The elements are going to be placed here -->
-                <cell x="10" y="10" name="text1">Text1</cell>
-                <cell x="10" y="50" name="text2">Text2</cell>
+            <statusbar />
+            <cell x="3" horizontalAlignment="center" fontSize="17pt" name="heading">HEADING</cell>
+            <horizontalLine y="50"></horizontalLine>
+            <cell x="3" horizontalAlignment="center" fontSize="26pt" wrapMode="wrap" maxLines="0" name="text">SOME TEXT WITH WORD WRAP</cell>
             </staticElements>
         </screen>
     </device>
 </NimmstaLayout>
 `;
-device.setXMLLayoutFor(5000, xml).then(() => {
+device.setXMLLayoutFor(10000, xml).then(() => {
     console.log("XML layout with timeout successfully set");
 }).catch((error) => {
     console.log("Error setting XML layout with timeout", error);
