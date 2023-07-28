@@ -35,6 +35,7 @@ NIMMSTA.onReady(function() {
         });
         connectionManager.socketDisconnectEvent.subscribe((event) => {
             console.log("CurrentConnectionCount", event.currentConnectionCount);
+            $('alert-disconnect').show();
         });
     } else {
         connectionManager.displayConnectActivity();
