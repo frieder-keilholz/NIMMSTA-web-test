@@ -86,10 +86,10 @@ setExampleLayout = () => {
     <device width="1.54" height="1.54" pxx="200" pxy="200">
         <screen default="true" name="default">
             <staticElements>
-            <statusbar />
-            <cell x="3" horizontalAlignment="center" fontSize="17pt" name="heading">HEADING</cell>
-            <horizontalLine y="50"></horizontalLine>
-            <cell x="3" horizontalAlignment="center" fontSize="26pt" wrapMode="wrap" maxLines="0" name="text">SOME TEXT WITH WORD WRAP</cell>
+                <statusbar />
+                <cell x="3" horizontalAlignment="center" fontSize="17pt" name="heading">HEADING</cell>
+                <horizontalLine y="50"></horizontalLine>
+                <cell x="3" horizontalAlignment="center" fontSize="26pt" wrapMode="wrap" maxLines="0" name="text">SOME TEXT WITH WORD WRAP</cell>
             </staticElements>
         </screen>
     </device>

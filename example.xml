@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NimmstaLayout name="scanResults">
+    <device width="1.54" height="1.54" pxx="200" pxy="200">
+        <screen default="true" name="default">
+            <staticElements>
+                <cell x="10" y="10">Scan Now</cell>
+                <cell x="10" y="30">Eingabefeld Text</cell>
+                <scanresult x="10" timeToShowBarcode="10" wrapMode="wrap">Vorbelegung</scanresult>
+                <button x="10" y="100" width="100" name="clear">Clear</button>
+            </staticElements>
+        </screen>
+    </device>
